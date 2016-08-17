@@ -45,13 +45,13 @@ class Contact
   # and then make the appropriate change to the contact
   def update (attribute, new_value)
 
-      if attribute == "First_Name"
+      if attribute == "first_name"
         @first_name = new_value
-      elsif attribute == "Last_Name"
+      elsif attribute == "last_name"
         @last_name = new_value
-      elsif attribute == "Email"
+      elsif attribute == "email"
         @email = new_value
-      elsif attribute == "Note"
+      elsif attribute == "note"
         @note = new_value
       else
         puts "Invalid Entry"
@@ -82,7 +82,7 @@ end
 
   # This method should delete all of the contacts
   def self.delete_all
-      @@contacts.delete
+      @@contacts.clear
   end
 
   def full_name
