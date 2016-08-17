@@ -109,6 +109,16 @@ class CRM
 
   def search_by_attribute
 
+    puts "Choose what category to search by: First_Name, Last_Name, EMail, Note"
+    answer_attribute = gets.chomp.downcase
+
+    puts "What do you want to search for?"
+    answer_value = gets.chomp.downcase
+
+    return_value = Contact.find_by(answer_attribute,answer_value)
+
+    display_contacts([return_value])
+    
     # HINT: Make use of the display_contacts method to keep your code DRY
   end
 
